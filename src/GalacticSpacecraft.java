@@ -78,12 +78,29 @@ public class GalacticSpacecraft {
         }
     }
 
+ public void turnRight() {
+        switch (direction) {
+            case "N":
+                direction = "E";
+                break;
+            case "S":
+                direction = "W";
+                break;
+            case "E":
+                direction = "S";
+                break;
+            case "W":
+                direction = "N";
+                break;
+        }
+    }
+
 
     public String getPositionAndDirection() {
         return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
 
-    
+
 
     public static void main(String[] args) {
         GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "N");
@@ -102,6 +119,9 @@ public class GalacticSpacecraft {
 
                       case "l":
                     spacecraft.turnLeft();
+                    break;
+                     case "r":
+                    spacecraft.turnRight();
                     break;
             }
  }
