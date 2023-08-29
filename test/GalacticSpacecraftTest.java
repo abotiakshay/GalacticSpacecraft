@@ -17,6 +17,12 @@ public void testMoveForwardFromStart() {
     assertEquals("(0, 1, 0) - N", spacecraft.getPositionAndDirection());
 }
 
+@Test
+public void testInvalidMovementBelowBoundary() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "Down");
+    spacecraft.moveBackward();
+    assertEquals("(0, 0, -1) - Down", spacecraft.getPositionAndDirection());
+}
 
 
 
