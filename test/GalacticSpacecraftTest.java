@@ -25,6 +25,14 @@ public void testInvalidMovementBelowBoundary() {
 }
 
 
+@Test
+public void testInvalidMovementAboveBoundary() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 100, "Up");
+    spacecraft.moveForward();
+    assertEquals("(0, 0, 100) - Up", spacecraft.getPositionAndDirection());
+}
+
+
 
     // Add more test cases for other movement and rotation scenarios
     
