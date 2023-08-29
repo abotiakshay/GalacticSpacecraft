@@ -135,6 +135,13 @@ public class GalacticSpacecraft {
                      case "r":
                     spacecraft.turnRight();
                     break;
+
+                      case "u":
+                    spacecraft.turnUp();
+                    break;
+                case "d":
+                    spacecraft.turnDown();
+                    break;
             }
  }
 
