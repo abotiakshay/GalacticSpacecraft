@@ -113,6 +113,13 @@ public void testInvalidCommand() {
     assertEquals("(0, 0, 0) - N", spacecraft.getPositionAndDirection());
 }
 
+@Test
+public void testMultipleMovementCommands() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "N");
+    spacecraft.executeCommand("ff");
+    assertEquals("(0, 2, 0) - N", spacecraft.getPositionAndDirection());
+}
+
     // Add more test cases for other movement and rotation scenarios
     
     @Test
