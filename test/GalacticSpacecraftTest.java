@@ -63,6 +63,17 @@ public void testInvalidMovementBelowBoundary() {
     assertEquals("(0, 0, -1) - Down", spacecraft.getPositionAndDirection());
 }
 
+@Test
+public void testBoundaryTurning() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "E");
+    spacecraft.turnLeft();
+    spacecraft.turnLeft();
+    spacecraft.turnLeft();
+    spacecraft.turnLeft();
+    assertEquals("(0, 0, 0) - E", spacecraft.getPositionAndDirection());
+}
+
+
     // Add more test cases for other movement and rotation scenarios
     
     @Test
