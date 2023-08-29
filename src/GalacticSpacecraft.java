@@ -11,6 +11,31 @@ public class GalacticSpacecraft {
         this.direction = direction;
     }
 
+
+    public void moveForward() {
+        switch (direction) {
+            case "N":
+                y++;
+                break;
+            case "S":
+                y--;
+                break;
+            case "E":
+                x++;
+                break;
+            case "W":
+                x--;
+                break;
+            case "Up":
+                z++;
+                break;
+            case "Down":
+                z--;
+                break;
+        }
+    }
+
+
     public String getPositionAndDirection() {
         return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
@@ -20,6 +45,15 @@ public class GalacticSpacecraft {
         String[] commands = {"f", "r", "u", "b", "l"};
         
       
+ for (String command : commands) {
+            switch (command) {
+                case "f":
+                    spacecraft.moveForward();
+                    break;
+            }
+ }
+
+
 
         System.out.println("Final Position: " + spacecraft.getPositionAndDirection());
     }
