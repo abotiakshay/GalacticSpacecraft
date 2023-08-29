@@ -81,6 +81,20 @@ public void testTurnRightFromSouth() {
 }
 
 
+@Test
+public void testTurnDownFromSouth() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "S");
+    spacecraft.turnDown();
+    assertEquals("(0, 0, 0) - Down", spacecraft.getPositionAndDirection());
+}
+
+@Test
+public void testTurnUpFromNorth() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "N");
+    spacecraft.turnUp();
+    assertEquals("(0, 0, 0) - Up", spacecraft.getPositionAndDirection());
+}
+
     // Add more test cases for other movement and rotation scenarios
     
     @Test
