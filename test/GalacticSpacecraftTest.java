@@ -73,6 +73,13 @@ public void testBoundaryTurning() {
     assertEquals("(0, 0, 0) - E", spacecraft.getPositionAndDirection());
 }
 
+@Test
+public void testTurnRightFromSouth() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "S");
+    spacecraft.turnRight();
+    assertEquals("(0, 0, 0) - W", spacecraft.getPositionAndDirection());
+}
+
 
     // Add more test cases for other movement and rotation scenarios
     
