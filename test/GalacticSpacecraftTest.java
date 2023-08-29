@@ -95,6 +95,18 @@ public void testTurnUpFromNorth() {
     assertEquals("(0, 0, 0) - Up", spacecraft.getPositionAndDirection());
 }
 
+
+@Test
+public void testMultipleCommands() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "N");
+    spacecraft.executeCommand("f");
+    spacecraft.executeCommand("r");
+    spacecraft.executeCommand("u");
+    spacecraft.executeCommand("b");
+    spacecraft.executeCommand("l");
+    assertEquals("(0, 1, -1) - N", spacecraft.getPositionAndDirection());
+}
+
     // Add more test cases for other movement and rotation scenarios
     
     @Test
