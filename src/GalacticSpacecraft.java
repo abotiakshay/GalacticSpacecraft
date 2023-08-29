@@ -96,6 +96,18 @@ public class GalacticSpacecraft {
     }
 
 
+   public void turnUp() {
+        if ("N".equals(direction) || "S".equals(direction) || "E".equals(direction) || "W".equals(direction)) {
+            direction = "Up";
+        }
+    }
+
+    public void turnDown() {
+        if ("N".equals(direction) || "S".equals(direction) || "E".equals(direction) || "W".equals(direction)) {
+            direction = "Down";
+        }
+    }
+
     public String getPositionAndDirection() {
         return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
