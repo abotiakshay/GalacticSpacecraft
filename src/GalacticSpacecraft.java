@@ -58,6 +58,27 @@ public class GalacticSpacecraft {
                 break;
         }
     }
+
+
+    
+    public void turnLeft() {
+        switch (direction) {
+            case "N":
+                direction = "W";
+                break;
+            case "S":
+                direction = "E";
+                break;
+            case "E":
+                direction = "N";
+                break;
+            case "W":
+                direction = "S";
+                break;
+        }
+    }
+
+    
     public String getPositionAndDirection() {
         return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
@@ -75,6 +96,10 @@ public class GalacticSpacecraft {
 
                      case "b":
                     spacecraft.moveBackward();
+                    break;
+
+                      case "l":
+                    spacecraft.turnLeft();
                     break;
             }
  }
