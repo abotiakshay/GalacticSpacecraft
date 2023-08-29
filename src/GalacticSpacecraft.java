@@ -36,6 +36,28 @@ public class GalacticSpacecraft {
     }
 
 
+    public void moveBackward() {
+        switch (direction) {
+            case "N":
+                y--;
+                break;
+            case "S":
+                y++;
+                break;
+            case "E":
+                x--;
+                break;
+            case "W":
+                x++;
+                break;
+            case "Up":
+                z--;
+                break;
+            case "Down":
+                z++;
+                break;
+        }
+    }
     public String getPositionAndDirection() {
         return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
@@ -49,6 +71,10 @@ public class GalacticSpacecraft {
             switch (command) {
                 case "f":
                     spacecraft.moveForward();
+                    break;
+
+                     case "b":
+                    spacecraft.moveBackward();
                     break;
             }
  }

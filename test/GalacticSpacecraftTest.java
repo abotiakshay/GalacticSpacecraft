@@ -49,6 +49,12 @@ public void testMoveForwardWithDifferentDirection() {
     assertEquals("(1, 0, 0) - E", spacecraft.getPositionAndDirection());
 }
 
+@Test
+public void testMoveBackwardFromStart() {
+    GalacticSpacecraft spacecraft = new GalacticSpacecraft(0, 0, 0, "N");
+    spacecraft.moveBackward();
+    assertEquals("(0, -1, 0) - N", spacecraft.getPositionAndDirection());
+}
 
     // Add more test cases for other movement and rotation scenarios
     
